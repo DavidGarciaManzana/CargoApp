@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dda7fea2-53be-4674-9865-96a9f84692b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/App/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/App/App.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Header/Header.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/TabSelector/TabSelector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/TabSelector/TabSelector.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/App/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +61,22 @@
       <updated>1685743866871</updated>
       <workItem from="1685743868182" duration="4484000" />
       <workItem from="1685749073968" duration="67000" />
-      <workItem from="1685749244286" duration="2421000" />
+      <workItem from="1685749244286" duration="4539000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,0 +1,40 @@
+.tabSelectorContainer {
+    padding: 45px 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabSelectorContainer h2 {
+    cursor: pointer;
+    height: 25px;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 25px;
+}
+
+.upcoming {
+    color: #FFFF00;
+    width: 88px;
+    font-weight: 900;
+}
+
+.upcoming::after {
+    content: "";
+    width: 30%;
+    border: 1px solid #FFFF00;
+    display: block;
+}
+
+.completed {
+    width: 92px;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.past {
+    width: 36px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
