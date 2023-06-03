@@ -1,0 +1,91 @@
+.truckHeader {
+    /*border: 1px solid aqua;*/
+    margin-top: 15px;
+    height: 31px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.truckType {
+    margin-left: 17px;
+    display: flex;
+    height: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.truckType img{
+    height: 15px;
+    width: 27px;
+}
+.truckType h4 {
+    text-align:center;
+    vertical-align: top;
+    /*height: 16px;*/
+    width: 33px;
+    color: #FFFFFF;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+.status{
+    color: white;
+    height: 11px;
+    width: 66.66px;
+    display: flex;
+    align-items: center;
+    margin-right: 29px;
+}
+
+.status span {
+    border-radius: 50%;
+    display: block;
+    height: 11px;
+    width: 11px;
+
+}
+.blueCircle{
+    background-color: #0394FF;
+}
+.greyCircle{
+    background-color: #989898;
+}
+.status h4 {
+    /*height: 10px;*/
+    width: 57.66px;
+    color: #FFFFFF;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-align: right;
+}
+
+.line {
+    display: block;
+    margin-top: 14px;
+    content: "";
+    box-sizing: border-box;
+    height: 1px;
+    width: 100%;
+    border: 1px solid #252525;
+}
+@media screen and (min-width: 420px) {
+    .truckHeader {
+        width: 350px;
+    }
+    .truckType {
+        width: 72px;
+    }
+    .line {
+        width: 350px;
+    }
+}

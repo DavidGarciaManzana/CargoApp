@@ -2,8 +2,7 @@ import React from 'react'
 import styles from '@/pages/App/App.module.css'
 import Header from "@/pages/Header/Header";
 import TabSelector from '@/pages/TabSelector/TabSelector';
-import Search from '@/pages/Search/Search'
-
+import Main from '@/pages/Main/Main'
 function App() {
     const [orderIdToSearch, setOrderIdToSearch] = React.useState("");
     React.useEffect(() => {
@@ -13,9 +12,8 @@ function App() {
     return (
         <div className={styles.appContainer}>
             <Header/>
-            {/* //todo create a Main component */}
-            <TabSelector/>
-            <Search orderIdToSearch={orderIdToSearch} setOrderIdToSearch={setOrderIdToSearch}></Search>
+
+            <Main orderIdToSearch={orderIdToSearch} setOrderIdToSearch={setOrderIdToSearch}></Main>
         </div>
     )
 }

@@ -1,0 +1,33 @@
+.placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 40%;
+    border-radius: 0 25px 25px 25px;
+    background: linear-gradient(45deg, #080C0F 0%, rgba(38,38,38,0.64) 100%);
+}
+.placeholder p {
+    height: 19px;
+    color: #FFFFFF;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-align: right;
+}
+.placeholder p span{
+    color: #FFFF00;
+}
+@media screen and (min-width: 420px) {
+    .placeholder{
+        width: 199px;
+    }
+    .placeholder p {
+        width: 152px;
+        font-size: 14px;
+    }
+
+}
