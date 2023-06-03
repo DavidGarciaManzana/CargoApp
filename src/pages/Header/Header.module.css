@@ -1,0 +1,30 @@
+.header{
+    padding: 79px 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.angleSmallDown {
+    cursor: pointer;
+    height: 18px;
+    width: 10px;
+    /*background-color: #FFFFFF;*/
+}
+.cargoOrders {
+    text-align: center;
+    height: 25px;
+    width: 123px;
+    color: #FFFFFF;
+    /*font-family: Gotham;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.bell {
+    cursor: pointer;
+    /*height: 27.5px;*/
+    height: 28px;
+    width: 22px;
+}
