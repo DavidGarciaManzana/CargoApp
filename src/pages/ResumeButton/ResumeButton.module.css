@@ -1,7 +1,7 @@
 .button{
     position: absolute;
     bottom: 0;
-    right: 5%;
+    right: 0;
     gap: 14px;
     display: flex;
     justify-content: center;
@@ -27,9 +27,6 @@
     width: 21px;
 }
 @media screen and (min-width: 420px) {
-    .button {
-        right: 0;
-    }
     .button p {
         width: 55px;
         font-size: 14px;
