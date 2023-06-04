@@ -5,15 +5,15 @@ function TruckHeader({type,status}) {
     return (
         <div className={styles.truckHeader}>
             <div className={styles.truckType}>
-                {type === 'FCL' ?
-                    <img src="/freight.svg" alt=""/> :
-                    <img src="/container-truck.svg" alt=""/>
+                {type === 'FTL' ?
+                    <img src="/container-truck.svg" alt=""/> :
+                    <img src="/freight.svg" alt=""/>
                 }
                 <h4>{type}</h4>
             </div>
 
             <div className={styles.status}>
-                {status === 'inTransit' ?
+                {status === 3 ?
                     <>
                         <span className={styles.blueCircle}></span>
                         <h4>In transit</h4>

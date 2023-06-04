@@ -14,7 +14,6 @@ function Main({orderIdToSearch, setOrderIdToSearch}) {
             try {
                 fetchedData = await handleAPI()
                 setIsLoading(false);
-                // Process the data or update state here
             } catch (error) {
                 console.error(error);
             }
@@ -22,7 +21,6 @@ function Main({orderIdToSearch, setOrderIdToSearch}) {
 
         fetchData();
     }, []);
-    console.log(fetchedData)
     return (
         <main>
             <TabSelector/>
@@ -30,8 +28,16 @@ function Main({orderIdToSearch, setOrderIdToSearch}) {
             {isLoading ? (
                 <div className={styles.loading}>Loading...</div>
             ) : (
-                fetchedData && fetchedData.map((order, index) => (
+                orderIdToSearch === '' ? fetchedData.map((order, index) => (
                     <Order
+                        key={index}
+                        orderId={order._id}
+                        type={order.type}
+                        status={order.status}
+                        pickup={false}
+                    />
+                )) : fetchedData.map((order, index) => (
+                    order._id.startsWith(orderIdToSearch) && <Order
                         key={index}
                         orderId={order._id}
                         type={order.type}
