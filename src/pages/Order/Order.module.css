@@ -9,7 +9,9 @@
 
 
 .orderTitle {
-    align-self: center;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 4%;
     /*font-family: Avenir;*/
     font-family: 'Open Sans', sans-serif;
     color: #CDCDCD;
@@ -27,6 +29,8 @@
 }
 @media screen and (min-width: 420px) {
     .orderTitle{
+        display: flex;
+        gap: 10px;
         align-self: flex-start;
     }
     .orderContainer {
