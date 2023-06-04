@@ -6,12 +6,12 @@ import Location from "@/pages/Location/Location";
 function InfoInCard({className = '', startDate, locations, ...delegated}) {
     let pickUpState;
     let pickUpAddress;
-    let pickUpDate = startDate.toLocaleDateString("es-MX", {
+    let pickUpDate = startDate?.toLocaleDateString("es-MX", {
         year: "2-digit",
         month: "2-digit",
         day: "2-digit"
     });
-    let pickUpHour = startDate.toLocaleTimeString("es-MX", {
+    let pickUpHour = startDate?.toLocaleTimeString("es-MX", {
         hour12: false,
         hour: "2-digit",
         minute: "2-digit"
@@ -21,7 +21,7 @@ function InfoInCard({className = '', startDate, locations, ...delegated}) {
     let dropOffAddress;
     let dropOffDate;
     let dropOffHour;
-    for (let i = 0; i < locations.length; i++) {
+    for (let i = 0; i < locations?.length; i++) {
         if (i === 0) {
             let address = locations[i].address.split(",")
             pickUpState = address[address.length - 2].trim();
@@ -42,12 +42,12 @@ function InfoInCard({className = '', startDate, locations, ...delegated}) {
             endDate.setDate(endDate.getDate() - 30);
             // Horas
             // orderDate.setHours(orderDate.getHours() - 5);
-            dropOffDate = endDate.toLocaleDateString("es-MX", {
+            dropOffDate = endDate?.toLocaleDateString("es-MX", {
                 year: "2-digit",
                 month: "2-digit",
                 day: "2-digit"
             });
-            dropOffHour = endDate.toLocaleTimeString("es-MX", {
+            dropOffHour = endDate?.toLocaleTimeString("es-MX", {
                 hour12: false,
                 hour: "2-digit",
                 minute: "2-digit"
