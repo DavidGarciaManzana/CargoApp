@@ -34,7 +34,8 @@ function Main({orderIdToSearch, setOrderIdToSearch}) {
                         orderId={order._id}
                         type={order.type}
                         status={order.status}
-                        pickup={false}
+                        date={order.start_date}
+                        locations={order.destinations}
                     />
                 )) : fetchedData.map((order, index) => (
                     order._id.startsWith(orderIdToSearch) && <Order
@@ -42,7 +43,8 @@ function Main({orderIdToSearch, setOrderIdToSearch}) {
                         orderId={order._id}
                         type={order.type}
                         status={order.status}
-                        pickup={false}
+                        date={order.start_date}
+                        locations={order.destinations}
                     />
                 ))
             )}
