@@ -21,11 +21,11 @@
 }
 @media screen and (min-width: 420px) {
     .pickupButton{
-        width: 199px;
+        width: 200px;
     }
     .pickupButton p {
         height: 19px;
-        width: 121px;
+        width: 200px;
         font-size: 14px;
     }
 
