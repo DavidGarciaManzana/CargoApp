@@ -26,15 +26,14 @@ function CargoDetails() {
 
         fetchData();
     }, []);
-
-    if (fetchedData?._id === orderId) {
+    //Como es un mockup no voy a validar la fecha, todos los botones de resume mostraran la info de la API
+    // if (fetchedData?._id === orderId) {
         referenceNumber = fetchedData?.order_number;
         locationsArray = fetchedData?.destinations;
-
-    }
+    // }
     return (
         <div className={styles.cargoDetails}>
-            <Header title={'Cargo Details'}/>
+            <Header link={true} title={'Cargo Details'}/>
             <CargoDetailsInfo orderId={fetchedData?._id} referenceNumber={referenceNumber}
                               locations={locationsArray}></CargoDetailsInfo>
         </div>

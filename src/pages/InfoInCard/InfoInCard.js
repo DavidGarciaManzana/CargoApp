@@ -1,8 +1,6 @@
 import React from "react"
-import styles from '@/pages/InfoInCard/InfoInCard.module.css';
-import Location from "@/pages/Location/Location";
-import InTransit from "@/pages/InTransit/InTransit";
-import Assigned from "@/pages/Assigned/Assigned";
+import OrderAddress from "@/pages/OrderAddress/OrderAddress";
+import CompleteOrderAddress from "@/pages/CompleteOrderAddress/CompleteOrderAddress";
 
 function InfoInCard({className = '', startDate, locations, cargoDetails, ...delegated}) {
     let pickUpState;
@@ -59,37 +57,12 @@ function InfoInCard({className = '', startDate, locations, cargoDetails, ...dele
     return (
         <>
             {cargoDetails ? (
-                <div className={`${styles.orderInfo2} ${className}`}>
-                    <div className={styles.address2}>
-                        <div className={styles.bigOval}>
-                            <div className={styles.smallOval}>
-                                <img src="/truck.svg" alt="Truck"/>
-                            </div>
-                        </div>
-                        <span className={styles.addressLine2}></span>
-                        <span className={styles.shape}>
-                        <span className={styles.insideShape}></span>
-                    </span>
-                    </div>
-                    <Location className={styles.pickUp} type={'PICKUP'} city={pickUpState}
-                              address={pickUpAddress}></Location>
-                    <InTransit className={styles.inTransit} title={'Accepted'}></InTransit>
-                    <Location className={styles.dropOff} type={'DROPOFF'} city={dropOffState}
-                              address={dropOffAddress}></Location>
-                    <Assigned className={styles.assigned} title={'On hold'}></Assigned>
-                </div>
+                <OrderAddress pickUpState={pickUpState} pickUpAddress={pickUpAddress} dropOffState={dropOffState}
+                              dropOffAddress={dropOffAddress}/>
             ) : (
-                <div className={`${styles.orderInfo} ${className}`}>
-                    <div className={styles.address}>
-                        <img src="/adress.svg" alt="Truck"/>
-                        <span className={styles.addressLine}></span>
-                        <img src="/marker.svg" alt="Marker"/>
-                    </div>
-                    <Location type={'PICKUP'} city={pickUpState}
-                              address={pickUpAddress} date={pickUpDate} hour={pickUpHour}></Location>
-                    <Location type={'DROPOFF'} city={dropOffState}
-                              address={dropOffAddress} date={dropOffDate} hour={dropOffHour}></Location>
-                </div>
+                <CompleteOrderAddress pickUpState={pickUpState} pickUpAddress={pickUpAddress}
+                                      dropOffState={dropOffState} dropOffAddress={dropOffAddress}
+                                      pickUpDate={pickUpDate} pickUpHour={pickUpHour} dropOffDate={dropOffDate} dropOffHour={dropOffHour}/>
             )
             }
 
