@@ -17,6 +17,7 @@
 }
 
 .yellowButton {
+    color: #0F1216;
     z-index: 6;
     position: absolute;
     bottom: 0;

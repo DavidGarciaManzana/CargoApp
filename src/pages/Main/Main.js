@@ -22,7 +22,7 @@ function Main({orderIdToSearch, setOrderIdToSearch}) {
         fetchData();
     }, []);
     return (
-        <main>
+        <main className={styles.main}>
             <TabSelector/>
             <Search orderIdToSearch={orderIdToSearch} setOrderIdToSearch={setOrderIdToSearch}/>
             {isLoading ? (
