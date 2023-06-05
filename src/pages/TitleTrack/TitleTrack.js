@@ -1,7 +1,7 @@
 import React from "react"
 import styles from '@/pages/TitleTrack/TitleTrack.module.css';
 
-function TitleTrack({className = '', status, ...delegated}) {
+function TitleTrack({className = '', status,name, ...delegated}) {
 
     return (
         <div className={styles.titleContainer}>
@@ -12,7 +12,7 @@ function TitleTrack({className = '', status, ...delegated}) {
                     } else if (index === 1) {
                         return <p className={styles.special}>Accepted Order</p>
                     } else if (index === 2) {
-                        return <p className={styles.special}>Pickup set up by Wilspecialliam</p>
+                        return <p className={styles.special}>Pickup set up by {name}</p>
                     } else if (index === 3) {
                         return <p className={styles.special}>Pickup Completed</p>
                     }
@@ -23,7 +23,7 @@ function TitleTrack({className = '', status, ...delegated}) {
                     } else if (index === 1) {
                         return <p>Accepted Order</p>
                     } else if (index === 2) {
-                        return  <p>Pickup set up by Wilspecialliam</p>
+                        return  <p>Pickup set up by {name}</p>
                     } else if (index === 3) {
                         return  <p>Pickup Completed</p>
                     }

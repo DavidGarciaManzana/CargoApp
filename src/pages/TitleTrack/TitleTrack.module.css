@@ -29,4 +29,10 @@
     margin-top: 39px;
     color: #FFFFFF;
 }
+@media screen and (min-width: 420px) {
+    .titleContainer p {
+        width: 230px;
+    }
+
+}
 

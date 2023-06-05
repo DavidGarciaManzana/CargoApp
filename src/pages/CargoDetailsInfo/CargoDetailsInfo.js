@@ -2,7 +2,6 @@ import React from "react"
 import styles from '@/pages/CargoDetailsInfo/CargoDetailsInfo.module.css';
 import InfoInCard from "@/pages/InfoInCard/InfoInCard";
 function CargoDetailsInfo({orderId,referenceNumber,locations}) {
-console.log(locations)
     return (
         <div className={styles.cargoDetailsInfo}>
             <h1 className={styles.reference}>Referencia <span>{referenceNumber}</span></h1>

@@ -41,12 +41,14 @@ function CargoDetails() {
         minute: "2-digit"
     });
     // }
+    const name = fetchedData?.driver.nickname.split(" ")[0];
+    console.log('nameeee' + name)
     return (
         <div className={styles.cargoDetails}>
             <Header link={true} title={'Cargo Details'}/>
             <CargoDetailsInfo orderId={fetchedData?._id} referenceNumber={referenceNumber}
                               locations={locationsArray}></CargoDetailsInfo>
-            <TrackCard status={fetchedData?.status_list.pickup} startTime={startTime}></TrackCard>
+            <TrackCard name={name} status={fetchedData?.status_list.pickup} startTime={startTime}></TrackCard>
 
         </div>
     );
