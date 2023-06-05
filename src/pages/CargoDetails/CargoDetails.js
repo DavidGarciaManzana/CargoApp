@@ -4,15 +4,13 @@ import Header from "@/pages/Header/Header";
 import CargoDetailsInfo from "@/pages/CargoDetailsInfo/CargoDetailsInfo";
 import {useRouter} from "next/router";
 import UseDetailsAPI from "@/hooks/UseDetailsAPI";
-import Order from "@/pages/Order/Order";
 
 let fetchedData;
 
 function CargoDetails() {
     let referenceNumber = "Does not exist."
-    const {orderId, locations} = useRouter().query;
+    const {orderId} = useRouter().query;
     let locationsArray;
-    console.log('location' + locations)
     const {handleAPI} = UseDetailsAPI();
     const [isLoading, setIsLoading] = React.useState(true);
 
@@ -31,7 +29,7 @@ function CargoDetails() {
 
     if (fetchedData?._id === orderId) {
         referenceNumber = fetchedData?.order_number;
-        locationsArray = JSON.parse(locations);
+        locationsArray = fetchedData?.destinations;
 
     }
     return (

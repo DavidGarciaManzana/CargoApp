@@ -62,9 +62,7 @@ function OrderInfoCard({orderId, type, status, date, locations}) {
                 <PickupButton className={styles.pickupButton}/>}
 
             <Link
-                href={`/CargoDetails/CargoDetails?orderId=${orderId}&locations=${encodeURIComponent(
-                    locationsString
-                )}`}
+                href={`/CargoDetails/CargoDetails?orderId=${orderId}`}
                 passHref
             >
                 <ResumeButton/>
