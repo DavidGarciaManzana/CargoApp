@@ -5,19 +5,21 @@ import PickupButton from "@/pages/PickupButton/PickupButton";
 import ResumeButton from "@/pages/ResumeButton/ResumeButton";
 import TruckHeader from "@/pages/TruckHeader/TruckHeader";
 import InfoInCard from "@/pages/InfoInCard/InfoInCard";
+import Link from 'next/link';
 
-function OrderInfoCard({type, status, date,locations}) {
+function OrderInfoCard({orderId, type, status, date, locations}) {
+
     let pickup;
     let dateDiff;
     const orderDate = new Date(date)
-    //Añado unas lineas de codigo para poder modificar las fechas y ver los cambios
-    //Años
-    orderDate.setFullYear(orderDate.getFullYear() + 1);
-    //Meses
-    orderDate.setMonth(orderDate.getMonth() + 3);
-    //Dias
-    orderDate.setDate(orderDate.getDate() - 30);
-    // Horas
+    // // Añado unas lineas de codigo para poder modificar las fechas y ver los cambios
+    // // Años
+    // orderDate.setFullYear(orderDate.getFullYear() + 1);
+    // // Meses
+    // orderDate.setMonth(orderDate.getMonth() + 3);
+    // // Dias
+    // orderDate.setDate(orderDate.getDate() - 30);
+    // // Horas
     // orderDate.setHours(orderDate.getHours() - 5);
     const actualDate = new Date()
     if (actualDate > orderDate) {
@@ -49,17 +51,26 @@ function OrderInfoCard({type, status, date,locations}) {
         }
         dateDiff = timeDiffString
     }
-console.log(orderDate.toLocaleDateString())
-
+    const locationsString = JSON.stringify(locations);
     return (
         <div className={styles.rectangleContainer}>
             <TruckHeader type={type} status={status}></TruckHeader>
-            <InfoInCard startDate={orderDate} locations={locations}></InfoInCard>
+            <InfoInCard startDate={orderDate} locations={locations} cargoDetails={false}></InfoInCard>
+
             {pickup === false ?
                 <PlaceholderButton className={styles.pickupButton} time={dateDiff}/> :
-                <PickupButton className={styles.pickupButton}/>
-            }
-            <ResumeButton></ResumeButton>
+                <PickupButton className={styles.pickupButton}/>}
+
+            <Link
+                href={`/CargoDetails/CargoDetails?orderId=${orderId}&locations=${encodeURIComponent(
+                    locationsString
+                )}`}
+                passHref
+            >
+                <ResumeButton/>
+            </Link>
+
+
         </div>
     );
 }

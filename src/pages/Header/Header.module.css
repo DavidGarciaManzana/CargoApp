@@ -28,3 +28,9 @@
     height: 28px;
     width: 22px;
 }
+@media screen and (min-width: 420px) {
+    .cargoOrders {
+        font-size: 18px;
+    }
+
+}

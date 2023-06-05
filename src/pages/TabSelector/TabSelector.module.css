@@ -9,7 +9,7 @@
     height: 25px;
     /*font-family: Avenir;*/
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 0;
     line-height: 25px;
 }
@@ -37,4 +37,10 @@
     width: 36px;
     font-weight: 300;
     color: #FFFFFF;
+}
+@media screen and (min-width: 420px) {
+    .tabSelectorContainer h2 {
+        font-size: 18px;
+    }
+
 }

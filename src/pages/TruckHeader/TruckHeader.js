@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '@/pages/TruckHeader/TruckHeader.module.css'
-
+import InTransit from "@/pages/InTransit/InTransit";
+import Assigned from "@/pages/Assigned/Assigned";
 function TruckHeader({type,status}) {
     return (
         <div className={styles.truckHeader}>
@@ -12,19 +13,16 @@ function TruckHeader({type,status}) {
                 <h4>{type}</h4>
             </div>
 
-            <div className={styles.status}>
+
                 {status === 3 ?
                     <>
-                        <span className={styles.blueCircle}></span>
-                        <h4>In transit</h4>
+                        <InTransit title={'In Transit'}></InTransit>
                     </> :
                     <>
-                        <span className={styles.greyCircle}></span>
-                        <h4>Assigned</h4>
+                        <Assigned title={'Assigned'}></Assigned>
                     </>
                 }
 
-            </div>
 
 
             <span className={styles.line}></span>

@@ -1,0 +1,34 @@
+.status{
+    color: white;
+    height: 11px;
+    width: 66.66px;
+    display: flex;
+    align-items: center;
+    margin-right: 29px;
+}
+
+.status span {
+    border-radius: 50%;
+    display: block;
+    height: 11px;
+    width: 11px;
+
+}
+.status h4 {
+    /*height: 10px;*/
+    width: 57.66px;
+    color: #FFFFFF;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-align: right;
+}
+.blueCircle{
+    background-color: #0394FF;
+}
+.greyCircle{
+    background-color: #989898;
+}

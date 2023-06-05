@@ -1,9 +1,10 @@
 import React from "react"
 import styles from '@/pages/InfoInCard/InfoInCard.module.css';
 import Location from "@/pages/Location/Location";
+import InTransit from "@/pages/InTransit/InTransit";
+import Assigned from "@/pages/Assigned/Assigned";
 
-
-function InfoInCard({className = '', startDate, locations, ...delegated}) {
+function InfoInCard({className = '', startDate, locations, cargoDetails, ...delegated}) {
     let pickUpState;
     let pickUpAddress;
     let pickUpDate = startDate?.toLocaleDateString("es-MX", {
@@ -35,11 +36,11 @@ function InfoInCard({className = '', startDate, locations, ...delegated}) {
             const endDate = new Date(locations[i].end_date)
             //Añado unas lineas de codigo para poder modificar las fechas y ver los cambios
             //Años
-            endDate.setFullYear(endDate.getFullYear() + 1);
+            // endDate.setFullYear(endDate.getFullYear() + 1);
             //Meses
-            endDate.setMonth(endDate.getMonth() + 3);
+            // endDate.setMonth(endDate.getMonth() + 3);
             //Dias
-            endDate.setDate(endDate.getDate() - 30);
+            // endDate.setDate(endDate.getDate() - 30);
             // Horas
             // orderDate.setHours(orderDate.getHours() - 5);
             dropOffDate = endDate?.toLocaleDateString("es-MX", {
@@ -56,17 +57,43 @@ function InfoInCard({className = '', startDate, locations, ...delegated}) {
     }
 
     return (
-        <div className={styles.orderInfo}>
-            <div className={styles.address}>
-                <img src="/adress.svg" alt="Truck"/>
-                <span className={styles.addressLine}></span>
-                <img src="/marker.svg" alt="Marker"/>
-            </div>
-            <Location className={styles.pickUp} type={'PICKUP'} city={pickUpState}
-                      address={pickUpAddress} date={pickUpDate} hour={pickUpHour}></Location>
-            <Location className={styles.dropOff} type={'DROPOFF'} city={dropOffState}
-                      address={dropOffAddress} date={dropOffDate} hour={dropOffHour}></Location>
-        </div>
+        <>
+            {cargoDetails ? (
+                <div className={`${styles.orderInfo2} ${className}`}>
+                    <div className={styles.address2}>
+                        <div className={styles.bigOval}>
+                            <div className={styles.smallOval}>
+                                <img src="/truck.svg" alt="Truck"/>
+                            </div>
+                        </div>
+                        <span className={styles.addressLine2}></span>
+                        <span className={styles.shape}>
+                        <span className={styles.insideShape}></span>
+                    </span>
+                    </div>
+                    <Location className={styles.pickUp} type={'PICKUP'} city={pickUpState}
+                              address={pickUpAddress}></Location>
+                    <InTransit className={styles.inTransit} title={'Accepted'}></InTransit>
+                    <Location className={styles.dropOff} type={'DROPOFF'} city={dropOffState}
+                              address={dropOffAddress}></Location>
+                    <Assigned className={styles.assigned} title={'On hold'}></Assigned>
+                </div>
+            ) : (
+                <div className={`${styles.orderInfo} ${className}`}>
+                    <div className={styles.address}>
+                        <img src="/adress.svg" alt="Truck"/>
+                        <span className={styles.addressLine}></span>
+                        <img src="/marker.svg" alt="Marker"/>
+                    </div>
+                    <Location type={'PICKUP'} city={pickUpState}
+                              address={pickUpAddress} date={pickUpDate} hour={pickUpHour}></Location>
+                    <Location type={'DROPOFF'} city={dropOffState}
+                              address={dropOffAddress} date={dropOffDate} hour={dropOffHour}></Location>
+                </div>
+            )
+            }
+
+        </>
     );
 }
 

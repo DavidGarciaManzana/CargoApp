@@ -1,0 +1,55 @@
+.cargoDetailsInfo{
+    margin-top: 35px;
+    height: 300px;
+    width: 390px;
+    border-radius: 35px 0 0 35px;
+    background: linear-gradient(45deg, #080C0F 0%, rgba(39,39,39,0) 100%);
+}
+.reference{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 36px;
+    height: 14px;
+    width: 115px;
+    color: #FFFFFF;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 19px;
+}
+.reference span {
+    margin-left: 10px;
+}
+
+.order{
+    margin-top: 4px;
+    display: flex;
+    margin-left: 36px;
+    height: 25px;
+    width: 149px;
+    color: #FFFFFF;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 25px;
+}
+.order span {
+    margin-left: 10px;
+}
+.infoCard{
+    margin-top: 22px;
+    margin-left: 36px;
+}
+@media screen and (min-width: 420px) {
+    .cargoDetailsInfo{
+        align-self: flex-end;
+    }
+    .order{
+        font-size: 18px;
+    }
+
+}

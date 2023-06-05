@@ -3,10 +3,10 @@ import styles from '@/pages/Main/Main.module.css';
 import Search from "@/pages/Search/Search";
 import Order from "@/pages/Order/Order";
 import TabSelector from "@/pages/TabSelector/TabSelector";
-import UseBegoAPI from "@/hooks/UseBegoAPI";
+import UseOrdersAPI from "@/hooks/UseOrdersAPI";
 let fetchedData = []
 function Main({orderIdToSearch, setOrderIdToSearch}) {
-    const {handleAPI} = UseBegoAPI();
+    const {handleAPI} = UseOrdersAPI();
     const [isLoading, setIsLoading] = React.useState(true);
 
     React.useEffect(() => {

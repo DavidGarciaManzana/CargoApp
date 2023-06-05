@@ -11,7 +11,7 @@ function App() {
 
     return (
         <div className={styles.appContainer}>
-            <Header/>
+            <Header title={'Cargo Orders'}/>
             <Main orderIdToSearch={orderIdToSearch} setOrderIdToSearch={setOrderIdToSearch}></Main>
         </div>
     )
