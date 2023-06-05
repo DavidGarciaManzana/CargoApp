@@ -4,7 +4,6 @@ import Button from "@/pages/Button/Button";
 
 function TrackOrderButton({className = '', status, ...delegated}) {
     let number = 0;
-    console.log(status)
     status?.map((stat, index) => {
         if (stat.active === true) {
             if (index === 0) {
@@ -18,9 +17,8 @@ function TrackOrderButton({className = '', status, ...delegated}) {
             }
         }
     })
-    console.log('numeroooooo: ' + number)
     return (
-        (number<2 ? <Button className={styles.button}>Track Order</Button> :
+        (number<3 ? <Button className={styles.button}>Track Order</Button> :
             <Button className={styles.yellowButton}>Track Order</Button>)
 
     );

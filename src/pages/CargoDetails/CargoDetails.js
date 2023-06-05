@@ -42,7 +42,6 @@ function CargoDetails() {
     });
     // }
     const name = fetchedData?.driver.nickname.split(" ")[0];
-    console.log('nameeee' + name)
     return (
         <div className={styles.cargoDetails}>
             <Header link={true} title={'Cargo Details'}/>
