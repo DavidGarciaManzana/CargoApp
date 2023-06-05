@@ -1,0 +1,61 @@
+.lineTrackContainer {
+    position: relative;
+    margin-top: 39px;
+}
+
+.line {
+    background: linear-gradient(to bottom, #FFFF00, #FFFFFF);
+    position: absolute;
+    content: "";
+    /*z-index: 100;*/
+    display: inline-block;
+    border-left: 1px solid #FFFFFF;
+    height: 150px;
+    width: 1px;
+    margin-right: 10px;
+}
+
+.circleOne, .circleTwo, .circleThree, .circleFour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -12px;
+    border-radius: 50%;
+    height: 25.21px;
+    width: 26px;
+    background-color: #FFFF00;
+    box-shadow: inset -2px -2px 4px 0 #C8C800, 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.circleTwo {
+    top: 44px;
+}
+
+.circleThree {
+    top: 92px;
+}
+
+.circleFour {
+    bottom: 22px;
+}
+
+.whiteDot1, .whiteDot2, .whiteDot3, .whiteDot4 {
+    position: absolute;
+    left: -18px;
+}
+
+.whiteDot2 {
+    position: absolute;
+    top: 44px;
+}
+
+.whiteDot3 {
+    position: absolute;
+    top: 92px;
+}
+
+.whiteDot4 {
+    position: absolute;
+    bottom: 22px;
+}

@@ -1,7 +1,7 @@
 .cargoDetailsInfo{
     margin-top: 35px;
     height: 300px;
-    width: 390px;
+    width: 275px;
     border-radius: 35px 0 0 35px;
     background: linear-gradient(45deg, #080C0F 0%, rgba(39,39,39,0) 100%);
 }
@@ -47,6 +47,7 @@
 @media screen and (min-width: 420px) {
     .cargoDetailsInfo{
         align-self: flex-end;
+        width: 390px;
     }
     .order{
         font-size: 18px;

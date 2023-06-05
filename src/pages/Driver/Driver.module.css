@@ -1,0 +1,30 @@
+.driverContainer{
+    z-index: 7;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 120px;
+    width: 120px;
+    border: 1px solid #1B1F22;
+    background-color: #181D22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oval{
+
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 108px;
+    width: 108px;
+    border: 1px solid #1F2224;
+    background-color: #151A1E;
+    box-shadow: 0 0 4px 0 #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.oval img{
+    height: 108px;
+    width: 108px;
+}

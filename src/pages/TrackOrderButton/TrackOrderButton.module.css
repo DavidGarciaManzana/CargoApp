@@ -1,0 +1,38 @@
+.button {
+    border: none;
+    z-index: 6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #353636;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 35px;
+    height: 60px;
+    width: 350px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #080C0F 0%, #131618 100%);
+
+}
+
+.yellowButton {
+    z-index: 6;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    align-self: center;
+    height: 60px;
+    width: 250px;
+    border-radius: 6px;
+    background-color: #FFFF00;
+}
+@media screen and (min-width: 420px) {
+    .yellowButton {
+        left: 0;
+        width: 350px;
+        transform: none;
+    }
+
+}

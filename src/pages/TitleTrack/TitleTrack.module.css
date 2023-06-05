@@ -1,0 +1,32 @@
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.first {
+    margin-top: 39px;
+}
+
+.titleContainer p {
+    margin-left: 26px;
+    margin-bottom: 32px;
+    display: block;
+    height: 14px;
+    width: 190px;
+    color: #5B5B5B;
+    /*font-family: Avenir;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+.titleContainer .special {
+    color: #FFFFFF;
+}
+.titleContainer .firstSp {
+    margin-top: 39px;
+    color: #FFFFFF;
+}
+
