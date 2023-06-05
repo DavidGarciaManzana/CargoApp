@@ -11,13 +11,13 @@ function LineTrack({className = '',status, ...delegated}) {
             {status?.map((stat,index) => {
                 if (stat.active === true) {
                     if(index===0){
-                        return <span className={styles.circleOne}><Check></Check></span>;
+                        return <span className={styles.circleOne}><Check color={'black'}></Check></span>;
                     } else if(index===1){
-                        return <span className={styles.circleTwo}><Check></Check></span>;
+                        return <span className={styles.circleTwo}><Check color={'black'}></Check></span>;
                     }else if(index===2){
-                        return <span className={styles.circleThree}><Check></Check></span>;
+                        return <span className={styles.circleThree}><Check color={'black'}></Check></span>;
                     }else if(index===3){
-                        return <span className={styles.circleFour}><Check></Check></span>;
+                        return <span className={styles.circleFour}><Check color={'black'}></Check></span>;
                     }
 
                 } else {
